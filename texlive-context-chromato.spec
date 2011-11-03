@@ -1,3 +1,9 @@
+# revision 23167
+# category ConTeXt
+# catalog-ctan /macros/context/contrib/context-chromato
+# catalog-date 2006-08-27 16:41:02 +0100
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-context-chromato
 Version:	20060827
 Release:	1
@@ -43,6 +49,7 @@ The module provides macros for drawing chromatograms.
 %{_texmfdistdir}/tex/context/third/chromato/t-chromato.tex
 %doc %{_texmfdistdir}/doc/context/third/chromato/chromato-demo.pdf
 %doc %{_texmfdistdir}/doc/context/third/chromato/chromato-doc.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,3 +60,5 @@ The module provides macros for drawing chromatograms.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
