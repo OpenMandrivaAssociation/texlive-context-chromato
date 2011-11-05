@@ -15,11 +15,11 @@ Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-chromato.
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/context-chromato.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
-Requires:	texlive-context
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
+Requires(post):	texlive-context
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
-Requires(post):	texlive-context.bin
 
 %description
 The module provides macros for drawing chromatograms.
@@ -29,8 +29,8 @@ The module provides macros for drawing chromatograms.
     %_texmf_mktexlsr_pre
 
 %post
-    %_texmf_mtxrun_post
     %_texmf_mktexlsr_post
+    %_texmf_mtxrun_post
 
 %preun
     if [ $1 -eq 0 ]; then
@@ -40,8 +40,8 @@ The module provides macros for drawing chromatograms.
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mtxrun_post
 	%_texmf_mktexlsr_post
+	%_texmf_mtxrun_post
     fi
 
 #-----------------------------------------------------------------------
