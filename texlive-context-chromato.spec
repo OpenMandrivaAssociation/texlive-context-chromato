@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-context-chromato
 Version:	20060827
-Release:	7
+Release:	8
 Summary:	ConTeXt macros for chromatograms
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-chromato
