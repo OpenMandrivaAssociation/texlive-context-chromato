@@ -1,6 +1,6 @@
 Name:		texlive-context-chromato
 Version:	47085
-Release:	1
+Release:	2
 Summary:	ConTeXt macros for chromatograms
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/context/contrib/context-chromato
